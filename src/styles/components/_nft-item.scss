@@ -1,7 +1,7 @@
 .nft-item {
   width: 144px;
   position: relative;
-
+  background-color: #F7C6D0;
   @include for-phone {
     position: unset;
   }

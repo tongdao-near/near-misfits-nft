@@ -1,12 +1,14 @@
 .header {
   padding: 36px 120px;
-  max-width: 1280px;
-  margin: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background: #DC3D3E;
+  color: #FFF;
 
+  
   @include for-small-desktop {
     padding: 36px;
     flex-wrap: wrap;
@@ -20,7 +22,10 @@
     padding: 20px;
     gap: 20px;
   }
-
+  &logo{
+    position:absolute;
+    
+  }
   &__navigation {
     flex-grow: 2;
     margin-right: 30px;
@@ -47,7 +52,7 @@
     display: flex;
     justify-content: center;
     letter-spacing: 0.01em;
-    color: $purpure-color;
+    color: #FFF;
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -74,7 +79,7 @@
     transition: all 0.2s ease-in-out;
     color: black;
     font-weight: bold;
-    background-color: $white;
+    
     border: 1px solid black;
     padding: 5px;
     border-radius: 15px;

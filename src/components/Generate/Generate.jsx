@@ -3,7 +3,7 @@ import GenerateSoldOut from './GenerateSoldOut';
 import GenerateBlock from './GenerateBlock';
 import { appStore } from '../../state/app';
 import useBuy from '../../hooks/useBuy';
-
+import img from '../../assets/img/11.png'
 const Generate = () => {
   const { state } = useContext(appStore);
   const { soldOut } = state.app;
@@ -16,40 +16,43 @@ const Generate = () => {
       <div className="generate__container">
         <div className="generate__information">
           <h2 className="generate__title">Why generate one?</h2>
+
           <p className="generate__text">
-            Aside from participating in coolest, most amazing, and first of its
-            kind NFT Avatar project on the NEAR ecosystem to date and getting a
-            jaw dropping profile picture you can show off all over the interwebz
-            - when you buy a NEAR Misfit you are helping us evolve and build the
-            future of Misfits.
+            Aside from helping the Nearkats in their mission of building out the open web, and participating in a super fun game utilizing bleeding edge tech, Nearkat NFTs will get you more than cute little kitty in a digital city.
           </p>
-          <p className="generate__text">
-            We can’t reveal much yet, but the future is full of excitement and
-            opportunities for Misfits!
-          </p>
-          <p className="generate__text-big">Alright, how much?</p>
-          <p className="generate__text">
-            NEAR Misfits are priced at a flat rate of {formatPrice(oneNFT)}{' '}
-            NEAR.
+
+          <p className="generate__text-big">Your Nearkat gets you:</p>
+          <p className="generate__text2">
+            Special Access to Nearkat owners group</p>
+          <p className="generate__text2">
+            Discounts on stuff</p>
+          <p className="generate__text2">
+            Another perk</p>
+          <p className="generate__text2">
+
+            Another perk</p>
+          <p className="generate__text2">
+            and who knows what else in the future...
+          </p >
+          <p className="generate__footer">
+            For the flat fee of 5Ⓝ, you can mint your own Nearkat.
           </p>
         </div>
 
         <div className="generate__block">
-          {soldOut ? <GenerateSoldOut /> : <GenerateBlock />}
+
 
           <picture>
-            <source srcSet="./images/generate-background-2x.webp 2x, ./images/generate-background.webp 1x" />
             <img
-              className={`generate__img ${
-                soldOut ? 'generate__img-sold-out' : ''
-              }`}
-              src="./images/generate-background.png"
+              className={`generate__img ${soldOut ? 'generate__img-sold-out' : ''
+                }`}
+              src={img}
               alt="generate misfits"
             />
           </picture>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
