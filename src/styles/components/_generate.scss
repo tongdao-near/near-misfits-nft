@@ -1,9 +1,13 @@
 .generate {
   display: flex;
-  background-color: $secondary-color;
+  background-color:#F7C6D0;
   position: relative;
   z-index: 1;
-
+  &__foote{
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+  
   &__container {
     width: 1092px;
     margin: auto;
@@ -38,17 +42,25 @@
     font-size: 36px;
     line-height: 115%;
     margin-bottom: 40px;
+    color: #DD3E3E;
   }
-
+  
   &__text {
     font-size: 16px;
     line-height: 150%;
     margin-bottom: 24px;
+    color: #2F9b87;
   }
-
+  &__text2 {
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 24px;
+    color: #2F9b87;
+  }
   &__text-big {
     font-size: 24px;
     margin-bottom: 24px;
+    color: #FFF;
   }
 
   &__img {

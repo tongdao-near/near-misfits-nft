@@ -5,9 +5,12 @@
   gap: 50px;
   padding: 130px 30px 170px;
   color: $secondary-color;
-  width: 1018px;
+  width: 100%;
   margin: auto;
+  padding-left: 25%;
+  padding-right: 25%;
 
+  background-color: #F7C6D0;
   @include for-laptop {
     width: 100%;
     padding: 130px 30px 170px;
@@ -27,6 +30,7 @@
     font-size: 36px;
     line-height: 115%;
     margin-bottom: 40px;
+    color: #DD3E3E;
   }
 
   &__text {
@@ -34,6 +38,8 @@
     line-height: 150%;
     margin-bottom: 16px;
     max-width: 345px;
+    color: #2F9B87;
+
   }
 
   &__picture {
@@ -52,7 +58,7 @@
   &__img {
     position: relative;
     z-index: 10;
-
+    width: 537px;
     @include for-phone {
       width: 100%;
     }

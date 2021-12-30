@@ -2,7 +2,8 @@
   color: $common-color;
   line-height: 150%;
   font-size: 16px;
-
+  background-color: #DC3D3E;
+  color: #FFF;
   &__container {
     width: 992px;
     margin: auto;
@@ -12,6 +13,7 @@
       width: 100%;
       padding: 50px 20px 100px;
     }
+    position: relative;
   }
 
   &__navigation {
@@ -32,6 +34,8 @@
   }
 
   .footer__social {
+        position: relative;
+
     gap: 30px;
     margin-bottom: 57px;
 
@@ -48,9 +52,16 @@
   }
 
   &__logo {
+        position: relative;
+
     margin-bottom: 34px;
   }
-
+  &__img{
+    position: absolute;
+    left: 940px;
+    top: 113px;
+    width: 397px;
+  }
   &__text {
     max-width: 340px;
     margin-bottom: 100px;

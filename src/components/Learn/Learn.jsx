@@ -1,35 +1,33 @@
 import React from 'react';
-import { ReactComponent as SvgEllipse } from '../../assets/images/leran-background-ellipse.svg';
-
+import img from '../../assets/img/f2.png';
 const Learn = () => (
   <section id="learn" className="learn">
     <div className="learn__information">
       <h2 className="learn__title">
-        Introducing <br /> NEAR Misfits (Gen&nbsp;0)
+        Nearkats: Next Generation
       </h2>
       <p className="learn__text">
-        10,000 brave souls set out into the vast unknown to explore the
-        Metaverse... Only 1,923 survived.
+        Nestled in the Nearverse, you can find the Nearkats using their powers of cuteness to bring forth the dream of the open web.
       </p>
       <p className="learn__text">
-        These Misfits are part of a Decentralised Special Operations crew from
-        all over the world and all walks of life. A group of humans rising to
-        the challenge of their times, coming together to build the Metaverse:
-        challenge the status quo, push the boundaries of what is possible, build
-        and contribute to enabling technology.
+        Now, you have the power to bolster their efforts by bringing more into existence.
+      </p>
+      <p className="learn__text">
+        This next generation is a collection of 10,000 Nearkats, randomly and programmatically generated, on the NEAR Blockchain.
+      </p>
+      <p className="learn__text">
+        They have a variety of colors, characteristics, faces, and features.
       </p>
     </div>
     <div className="learn__picture">
       <picture>
-        <source srcSet="./images/learn-zombie-2x.webp 2x, ./images/learn-zombie.webp 1x" />
         <img
-          src="./images/learn-zombie.png"
+          src={img}
           alt="zombie"
           className="learn__picture-image"
         />
       </picture>
 
-      <SvgEllipse className="learn__background-ellipse" />
     </div>
   </section>
 );

@@ -4,14 +4,17 @@
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-
+    
     @include for-phone {
       gap: 20px;
     }
   }
-
+  &__logo{
+    position:absolute;
+    left: 10%;
+top: 20px;  }
   &__link {
-    color: $green-color;
+    color: #FFF;
     font-weight: 600;
     font-size: 16px;
     line-height: 115%;

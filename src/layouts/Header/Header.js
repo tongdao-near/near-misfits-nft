@@ -4,7 +4,7 @@ import Navigation from '../../components/Navigation';
 import SocialLinks from '../../components/SocialLinks';
 import ConnectWalletBtn from '../../components/ConnectWalletBtn';
 import Loader from '../../components/Loader/Loader';
-
+import logo from '../../assets/img/foot_logo.png';
 const Header = () => {
   const { state } = useContext(appStore);
   const { wallet, account } = state;
@@ -15,8 +15,8 @@ const Header = () => {
 
   return (
     <header className="header">
+      <img className="header__logo" src={logo}></img>
       <Navigation className="header__navigation" signedIn={wallet.signedIn} />
-      <SocialLinks className="header__social" />
       {account?.accountId ? (
         <ConnectWalletBtn
           text={account.accountId}

@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+import logo from '../../assets/img/foot_logo.png';
 const Navigation = ({ className, signedIn }) => (
+
   <nav className={`navigation ${className || ''}`}>
+
+
     <ul className="navigation__list">
+
       <li className="navigation__list-item">
         <Link to="/#learn" className="navigation__link">
           Learn
@@ -16,15 +20,26 @@ const Navigation = ({ className, signedIn }) => (
         </Link>
       </li>
       <li className="navigation__list-item">
-        <Link to="/#generate" className="navigation__link">
-          Generate
-        </Link>
-      </li>
-      <li className="navigation__list-item">
         <Link to="/#faq" className="navigation__link">
           FAQ
         </Link>
       </li>
+      <li className="navigation__list-item">
+        <Link to="/#generate" className="navigation__link">
+          Roadmap
+        </Link>
+      </li>
+      <li className="navigation__list-item">
+        <Link to="/my-nfts" className="navigation__link">
+          MyNFTs
+        </Link>
+      </li>
+      <li className="navigation__list-item">
+        <Link to="/link-drop" className="navigation__link">
+          LinkDrop
+        </Link>
+      </li>
+
       {signedIn && (
         <>
           <li className="navigation__list-item">

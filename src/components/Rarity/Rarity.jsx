@@ -8,25 +8,19 @@ import RarityList from './RarityList';
 const Rarity = () => (
   <section id="rarity" className="rarity">
     <div className="rarity__header">
-      <h1 className="rarity__title">Types of Misfits (Rarity)</h1>
+      <h1 className="rarity__title">10,000 Nearkats... <br /> How rare is yours?</h1>
       <RateList rates={rarityData.rates} />
-      <ReactSVG className="rarity__header-background" src={gradient} />
     </div>
     <div className="rarity__content-wrapper">
       <div className="rarity__content">
         <div className="rarity__information">
           <p className="rarity__text">
-            All Misfits are equal, but some are more equal than others!
+            All Nearkats are cute, however, some are more rare than others. The rarity of your Nearkat is determined by its attributes.
           </p>
           <p className="rarity__text">
-            Amongst the 1923 Misfits there are 1600 Normies, 150 Zombies, 101
-            Skeletons (‘Skellies’), 50 Nearkats and the most rare of them all -
-            22 Glitched!
+            Each has been given a score to represent how rare it is. There is also a fancy color system to help you distinquish.
           </p>
-          <p className="rarity__text">
-            Each one of these cohorts have a unique story, which we will unveil
-            soon…
-          </p>
+
         </div>
 
         <RarityList list={rarityData.misfits} />
