@@ -1,4 +1,4 @@
-const contractName = process.env.REACT_APP_CONTRACT_NAME || 'misfits.tenk.near';
+const contractName = process.env.REACT_APP_CONTRACT_NAME || 'dev-1640834764481-14171076017744';
 
 export default function getConfig() {
   let config = {
