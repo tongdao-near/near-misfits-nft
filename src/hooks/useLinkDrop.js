@@ -4,13 +4,16 @@ import { generate as id } from 'shortid';
 import { KeyPairEd25519 } from 'near-api-js/lib/utils';
 import { GAS } from '../state/near';
 import { appStore } from '../state/app';
+import getConfig from '../config';
+
+const walletBaseUrl = getConfig().walletUrl;
 
 const useLinkDrop = () => {
   const { state } = useContext(appStore);
   const { contract, account, app, price } = state;
 
   const walletUrl = (contractId, key, url) =>
-    `https://wallet.near.org/linkdrop/${contractId}/${key}?redirectUrl=${url}/my-nfts`;
+    `${walletBaseUrl}/linkdrop/${contractId}/${key}?redirectUrl=${url}/my-nfts`;
 
   const createLinkDrop = async () => {
     const keyPair = KeyPairEd25519.fromRandom();

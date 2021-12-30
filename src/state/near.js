@@ -19,12 +19,17 @@ export const {
   },
 } = nearAPI;
 
-const linkmatcher =
-  /https:\/\/wallet.near.org\/linkdrop\/[^/]+\/(?<key>.+)\?redirectUrl=/;
+const linkmatcher = networkId === 'mainnet' ?
+  /https:\/\/wallet.near.org\/linkdrop\/[^/]+\/(?<key>.+)\?redirectUrl=/ :
+  /https:\/\/wallet.testnet.near.org\/linkdrop\/[^/]+\/(?<key>.+)\?redirectUrl=/ ;
 
 function getPublicKey(link) {
-  const m = link.match(linkmatcher).groups.key;
-  return KeyPairEd25519.fromString(m).getPublicKey();
+  try {
+    const m = link.match(linkmatcher).groups.key;
+    return KeyPairEd25519.fromString(m).getPublicKey();
+  } catch (err) {
+    return;
+  }
 }
 
 export const initNear =
@@ -90,8 +95,13 @@ export const initNear =
           }),
           contract.nft_metadata(),
           ...linkDropArray.map(async (link) => {
-            const public_key = getPublicKey(link.link).toString();
-            link.isUsed = !(await contract.check_key({ public_key }));
+            // const public_key = getPublicKey(link.link).toString();
+            // link.isUsed = !(await contract.check_key({ public_key }));
+            const pubKey = getPublicKey(link.link);
+            if (!pubKey) {
+              return;
+            }
+            link.isUsed = !(await contract.check_key({ public_key: pubKey.toString() }));
           }),
         ]);
 
