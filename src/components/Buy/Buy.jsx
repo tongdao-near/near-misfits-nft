@@ -27,14 +27,6 @@ const Buy = ({ soldOut }) => {
           </>
         ) : (
           <div className="buy__sold-out-wrapper">
-            <picture>
-              <source srcSet="./images/generate-background-2x.webp 2x, ./images/generate-background.webp 1x" />
-              <img
-                className="buy__image"
-                src="./images/generate-background.png"
-                alt="sold out background"
-              />
-            </picture>
             <GenerateSoldOut className="buy__sold-out" />
           </div>
         )}

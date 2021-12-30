@@ -29,16 +29,6 @@ const Navigation = ({ className, signedIn }) => (
           Roadmap
         </Link>
       </li>
-      <li className="navigation__list-item">
-        <Link to="/my-nfts" className="navigation__link">
-          MyNFTs
-        </Link>
-      </li>
-      <li className="navigation__list-item">
-        <Link to="/link-drop" className="navigation__link">
-          LinkDrop
-        </Link>
-      </li>
 
       {signedIn && (
         <>

@@ -6,7 +6,7 @@
     }
 
     path {
-      fill: $purpure-color;
+      fill: $light-red-color;
       transition: all 0.2s ease-in-out;
     }
 
@@ -14,11 +14,11 @@
       svg {
         cursor: pointer;
         transform: scale(1.1);
-        box-shadow: 0 0 30px $purpure-color;
+        box-shadow: 0 0 30px $light-red-color;
       }
 
       path {
-        fill: $purpure-color-hover;
+        fill: $red-color-hover;
       }
     }
   }
@@ -29,14 +29,14 @@
       transition: all 0.2s ease-in-out;
     }
     path {
-      fill: $blue-color;
+      fill: $light-red-color;
     }
 
     &:hover {
       svg {
         cursor: pointer;
         transform: scale(1.1);
-        box-shadow: 0 0 10px $blue-color-hover;
+        box-shadow: 0 0 10px $light-red-color;
       }
     }
   }
