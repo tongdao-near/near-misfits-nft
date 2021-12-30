@@ -25,7 +25,7 @@ const Footer = () => {
         </p>
         <p className="footer__copyright ">
           © 2021 Nearkat Guild. All Rights Reserved.        </p>
-        <img className="footer__img" src={img}></img>
+        <img className="footer__img hide-mobile" src={img}></img>
 
       </div>
     </footer>
