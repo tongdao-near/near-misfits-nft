@@ -1,7 +1,7 @@
 .shareable-circle {
   border-radius: 100px;
   border: 2px solid $white;
-  outline: 1px solid $blue-color;
+  outline: 1px solid #969696;
   min-width: 20px;
   min-height: 20px;
   background-color: $white;
@@ -9,6 +9,6 @@
   transition: all 0.3s ease-in-out;
 
   &__active {
-    background-color: $blue-color;
+    background-color: #969696;
   }
 }

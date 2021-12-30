@@ -115,10 +115,10 @@ const LinkDrop = () => {
               />
             </div>
             <picture>
-              <source srcSet="./images/misfits-big-2x.webp 2x, ./images/misfits-big.webp 1x" />
+              {/* <source srcSet="./images/misfits-big-2x.webp 2x, ./images/misfits-big.webp 1x" /> */}
               <img
                 className="link-drop__img"
-                src="/images/misfits-big.png"
+                src="/images/linkdrop.png"
                 alt="big misfits"
               />
             </picture>

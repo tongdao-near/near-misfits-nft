@@ -5,7 +5,6 @@ import NftList from '../../components/NftList/NftList';
 import NoNfts from '../../components/NoNfts/NoNfts';
 import { appStore } from '../../state/app';
 import Buy from '../../components/Buy';
-import backgroundNft from '../../assets/images/nft-background.svg';
 
 const MyNFTS = () => {
   const history = useHistory();
@@ -22,7 +21,6 @@ const MyNFTS = () => {
 
   return nftsCount ? (
     <div className="my-nfts">
-      <ReactSVG className="my-nfts__background" src={backgroundNft} />
       <div className="my-nfts__data">
         <NftList />
       </div>

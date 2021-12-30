@@ -10,9 +10,9 @@ const CalendarBtn = ({ className }) => {
       type="button"
       title="Add to Calendar"
       className={`calendar-btn  ${className}`}
-      onClick={() => history.push('/#generate')}
+      onClick={() => history.push('/my-nfts')}
     >
-      +  Add to your Calendar
+      Buy NFT
     </button>
   );
 };

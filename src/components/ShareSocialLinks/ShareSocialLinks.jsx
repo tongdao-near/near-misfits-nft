@@ -14,7 +14,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
   const colorIcon =
     color === 'purpure'
       ? 'share-social-links__purpure'
-      : 'share-social-links__blue';
+      : 'share-social-links__light';
 
   return (
     <ul className={className}>

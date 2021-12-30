@@ -23,6 +23,24 @@
     }
   }
 
+  &__light {
+    svg {
+      border-radius: 100px;
+      transition: all 0.2s ease-in-out;
+    }
+    path {
+      fill: $light-color;
+    }
+
+    &:hover {
+      svg {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px $light-color;
+      }
+    }
+  }
+
   &__blue {
     svg {
       border-radius: 100px;
