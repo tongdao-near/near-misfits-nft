@@ -37,10 +37,10 @@ export default function getConfig() {
   // if (process.env.REACT_APP_ENV === 'prod') {
   config = {
     ...config,
-    networkId: 'mainnet',
-    nodeUrl: 'https://rpc.mainnet.near.org',
-    walletUrl: 'https://wallet.near.org',
-    helperUrl: 'https://helper.mainnet.near.org',
+    // networkId: 'mainnet',
+    // nodeUrl: 'https://rpc.mainnet.near.org',
+    // walletUrl: 'https://wallet.near.org',
+    // helperUrl: 'https://helper.mainnet.near.org',
   };
   // }
 

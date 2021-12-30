@@ -36,20 +36,24 @@ export const getContract = (account, methods = contractMethods) => {
   });
 };
 
-export const getPrice = async (near) => {
+export const getPrice = async (near, account) => {
   const contract = await near.loadContract(contractName, {
     ...contractMethods,
   });
+  let accountId = 'nobody';
+  if (account) {
+    accountId = account.accountId;
+  }
 
   let [discount, tenTokenCost, tokenStorage, oneTokenCost, costLinkDrop] =
     await Promise.all([
       contract.discount({
         num: 10,
       }),
-      contract.total_cost({ num: 10 }),
+      contract.total_cost({ num: 10, minter: accountId }),
       contract.token_storage_cost(),
-      contract.cost_per_token({ num: 1 }),
-      contract.cost_of_linkdrop(),
+      contract.cost_per_token({ num: 1, minter: accountId }),
+      contract.cost_of_linkdrop({ minter: accountId }),
     ]);
 
   const discountFormat = formatNearAmount(discount);
