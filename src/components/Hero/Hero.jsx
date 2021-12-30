@@ -23,7 +23,7 @@ const Hero = () => {
           <p className="hero__text">Sale Launches August 16th</p>
           { wallet?.signedIn ?
               (<CalendarBtn className="hero__calendar-btn" />) :
-              (<ConnectWalletBtn handleClick={() => wallet.signIn()} />)
+              (<ConnectWalletBtn claz="" handleClick={() => wallet.signIn()} />)
           }
 
           <picture>

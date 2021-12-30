@@ -19,11 +19,12 @@ const Header = () => {
       <Navigation className="header__navigation" signedIn={wallet.signedIn} />
       {account?.accountId ? (
         <ConnectWalletBtn
+          claz='hide-mobile'
           text={account.accountId}
           handleClick={() => wallet.signOut()}
         />
       ) : (
-        <ConnectWalletBtn handleClick={() => wallet.signIn()} />
+        <ConnectWalletBtn claz='hide-mobile' handleClick={() => wallet.signIn()} />
       )}
     </header>
   );

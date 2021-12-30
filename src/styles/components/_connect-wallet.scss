@@ -1,3 +1,9 @@
+.hide-mobile {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .connect-wallet {
   background: #DC3D3E;
   border: 2px solid #FFF;
