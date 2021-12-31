@@ -16,7 +16,11 @@ const Header = () => {
   return (
     <header className="header">
       <img className="header__logo" src={logo}></img>
+
       <Navigation className="header__navigation" signedIn={wallet.signedIn} />
+
+      <SocialLinks className="header__social" />
+
       {account?.accountId ? (
         <ConnectWalletBtn
           claz='hide-mobile'

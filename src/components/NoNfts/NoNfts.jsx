@@ -14,14 +14,13 @@ const NoNfts = ({ soldOut }) => {
         <div className="no-nfts__data-top">
           <div className="no-nfts__information">
             <p className="no-nfts__title">
-              You don&#39;t have any{' '}
+              你还没有任何
               <span className="no-nfts__text-purpure">
-                {pathname === '/link-drop' ? 'LinkDrops' : 'NFTs'}
+                {pathname === '/link-drop' ? 'LinkDrop' : 'NFT'}
               </span>{' '}
-              yet
             </p>
             <p className="no-nfts__text">
-              Buy your first <span className="no-nfts__text-purpure">NFT</span>
+              点击下方，立即购买<span className="no-nfts__text-purpure">专属NFT</span>
             </p>
             <ShareSocialLinks className="no-nfts__links" color="purpure" />
           </div>

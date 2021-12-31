@@ -33,7 +33,7 @@ const GenerateSoldOut = ({ className }) => {
       </a>
       {showSendNft && (
         <BuyMoreBtn
-          text="Send an NFT"
+          text="发送NFT"
           className="buy__nft"
           onClick={modalOpen}
         />

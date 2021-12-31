@@ -20,7 +20,7 @@ const Buy = ({ soldOut }) => {
             <BuyMore />
             <BuyMore isLinkDrop={linkDrop} />
             <BuyMoreBtn
-              text="Send an NFT"
+              text="发送NFT"
               className="buy__nft"
               onClick={modalOpen}
             />

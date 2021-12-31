@@ -41,7 +41,7 @@ const BuyMore = ({ isLinkDrop }) => {
         )}
         {isLinkDrop && (
           <p className="buy-more__top-text">
-            Share a mystery NFT for your friend
+            赠送NFT盲盒给朋友
           </p>
         )}
       </div>
