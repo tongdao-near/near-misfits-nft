@@ -9,6 +9,7 @@ import Skellies from '../../assets/images/rarity-rare.svg';
 import Zombies from '../../assets/images/rarity-uncommon.svg';
 import Meerkats from '../../assets/images/rarity-very-rare.svg';
 import Glitches from '../../assets/images/rarity-super-rare.svg';
+import Spinner from '../../assets/img/spinner.gif';
 import Reveal from '../../pages/MyNFTS/Reveal';
 
 const rarity = {
@@ -22,6 +23,7 @@ const rarity = {
 const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
   const [reveal, setReveal] = useState(isReveal);
   const [info, setInfo] = useState({});
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(async () => {
     try {
@@ -45,9 +47,17 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
       {reveal ? (
         <div>
           <img
+            style={loaded ? {} : { display: 'none' }}
             className="nft-item__img"
             src={`${urlIpfs}/${item.media}`}
-            alt="misfit"
+            alt="nft"
+            onLoad={() => setLoaded(true)}
+          />
+          <img
+            style={loaded ? { display: 'none' } : {}}
+            className="nft-item__img"
+            src={Spinner}
+            alt="nft"
           />
 
           <div className="nft-item__footer">

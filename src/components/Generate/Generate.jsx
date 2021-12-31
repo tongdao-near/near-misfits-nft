@@ -47,7 +47,7 @@ const Generate = () => {
               className={`generate__img ${soldOut ? 'generate__img-sold-out' : ''
                 }`}
               src={img}
-              alt="generate misfits"
+              alt="generate"
             />
           </picture>
         </div>

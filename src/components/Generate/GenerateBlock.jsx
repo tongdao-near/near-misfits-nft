@@ -31,9 +31,10 @@ const GenerateBlock = () => {
   };
 
   const moreThenManyCount = app.tokensLeft >= app.manyCount;
-  const textForMessage = moreThenManyCount
-    ? `select ${app.oneCount} or ${app.manyCount} misfits`
-    : `select ${app.oneCount} misfit`;
+  const textForMessage = '请选择数量';
+  // const textForMessage = moreThenManyCount
+  //   ? `select ${app.oneCount} or ${app.manyCount} misfits`
+  //   : `select ${app.oneCount} misfit`;
 
   return (
     <div id="generate-block" className="generate-block">
