@@ -1,5 +1,5 @@
 const contractName =
-  process.env.REACT_APP_CONTRACT_NAME || 'dev-1640834764481-14171076017744';
+  process.env.REACT_APP_CONTRACT_NAME || 'tongv0.tenk.testnet';
 
 export default function getConfig() {
   let config = {
