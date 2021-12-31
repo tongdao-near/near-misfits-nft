@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import CalendarBtn from './CalendarBtn';
-import HeroBackground from './HeroBackground';
-import img1 from '../../assets/img/f1.png'   //引入
+import img1 from '../../assets/img/f1.png';
+import headline from '../../assets/img/headline.png';
 import ConnectWalletBtn from '../ConnectWalletBtn';
 import { appStore } from '../../state/app';
 
@@ -13,14 +13,15 @@ const Hero = () => {
     <div className="hero">
       <div className="hero__container">
         <div className="hero__information">
-          <h1 className="hero__title">
-            Cute is the new ‘cool’ <br />
-          </h1>
+          <img
+            className="hero__headline__image"
+            src={headline}
+          />
           <p className="hero__text">
-            Now you can own some of the cutest critters in the Metaverse.
-
+            同道星座学院是一个基于NEAR区块链随机生成的 NFT头像收藏合集，包含 12,000 枚由算法生成的独特同道星座头象，以盲盒形式发售。
+            
           </p>
-          <p className="hero__text">Sale Launches August 16th</p>
+          <p className="hero__text">欢迎加入同道星座学院 - 创造快乐，追逐梦想！</p>
           { wallet?.signedIn ?
               (<CalendarBtn className="hero__calendar-btn" />) :
               (<ConnectWalletBtn claz="" handleClick={() => wallet.signIn()} />)

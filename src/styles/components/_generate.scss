@@ -1,6 +1,6 @@
 .generate {
   display: flex;
-  background-color:#F7C6D0;
+  background-color:#F2F1D1;
   position: relative;
   z-index: 1;
   &__foote{
@@ -61,6 +61,26 @@
     font-size: 24px;
     margin-bottom: 24px;
     color: #FFF;
+  }
+
+  &__buy-btn {
+    width: 200px;
+    height: 72px;
+    display: block;
+    margin-top: 40px;
+    font-family: $common-font;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    padding: 18px 40px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    background: #CB015B;
+    border-radius: 100px;
+    filter: drop-shadow(0px 0px 10px #CB015B);
   }
 
   &__img {

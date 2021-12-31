@@ -42,6 +42,8 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
     onClick({ [item.title]: true });
   };
 
+  const src = new URL(item.media, urlIpfs).href;
+
   return (
     <div className="nft-item">
       {reveal ? (
@@ -49,7 +51,7 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
           <img
             style={loaded ? {} : { display: 'none' }}
             className="nft-item__img"
-            src={`${urlIpfs}/${item.media}`}
+            src={src}
             alt="nft"
             onLoad={() => setLoaded(true)}
           />

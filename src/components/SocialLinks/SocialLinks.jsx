@@ -1,8 +1,9 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 import PropTypes from 'prop-types';
-import socialFace from '../../assets/images/social-face.svg';
-import socialTwitter from '../../assets/images/social-twitter.svg';
+import socialParas from '../../assets/images/social-paras.png';
+import socialFace from '../../assets/images/social-discord.png';
+import socialTwitter from '../../assets/images/social-twitter.png';
 
 const SocialLinks = ({ className }) => (
   <div className={`social-links ${className || ''}`}>
@@ -12,10 +13,9 @@ const SocialLinks = ({ className }) => (
       target="_blank"
     >
       <picture>
-        <source srcSet="./images/social-paras-2x.webp 2x, ./images/social-paras.webp 1x" />
         <img
           className="social-links__item"
-          src="./images/social-paras.png"
+          src={socialParas}
           alt="paras"
         />
       </picture>
@@ -25,14 +25,14 @@ const SocialLinks = ({ className }) => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ReactSVG className="social-links__item" src={socialFace} />
+      <img className="social-links__item" src={socialFace} alt="discord" />
     </a>
     <a
       href="https://twitter.com/NEARProtocol"
       rel="noopener noreferrer"
       target="_blank"
     >
-      <ReactSVG className="social-links__item" src={socialTwitter} />
+      <img className="social-links__item" src={socialTwitter} alt="twitter" />
     </a>
   </div>
 );

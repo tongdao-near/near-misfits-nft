@@ -11,12 +11,12 @@ const Navigation = ({ className, signedIn }) => (
 
       <li className="navigation__list-item">
         <Link to="/#learn" className="navigation__link">
-          Learn
+          学习
         </Link>
       </li>
       <li className="navigation__list-item">
         <Link to="/#rarity" className="navigation__link">
-          Rarity
+          稀有度
         </Link>
       </li>
       <li className="navigation__list-item">
@@ -26,7 +26,7 @@ const Navigation = ({ className, signedIn }) => (
       </li>
       <li className="navigation__list-item">
         <Link to="/#generate" className="navigation__link">
-          Roadmap
+          路线图
         </Link>
       </li>
 
@@ -34,7 +34,7 @@ const Navigation = ({ className, signedIn }) => (
         <>
           <li className="navigation__list-item">
             <Link to="/my-nfts" className="navigation__link">
-              My NFTs
+              我的NFT
             </Link>
           </li>
           <li className="navigation__list-item">

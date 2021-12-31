@@ -1,6 +1,7 @@
 /* eslint-disable */
 import * as nearAPI from 'near-api-js';
 import getConfig from '../config';
+import Big from 'big.js';
 
 export const { networkId, nodeUrl, walletUrl, contractName, contractMethods } =
   getConfig();
@@ -57,13 +58,20 @@ export const getPrice = async (near, account) => {
     ]);
 
   const discountFormat = formatNearAmount(discount);
-  const tenTokenFormat = formatNearAmount(tenTokenCost);
-  const oneTokenFormat = formatNearAmount(oneTokenCost);
   const tokenStorageFormat = formatNearAmount(tokenStorage);
 
+  const oneTokenCostBN = Big(oneTokenCost);
+  const tenTokenCostBN = Big(tenTokenCost);
+  const storageCostBN = Big(tokenStorage);
+
+  const oneNFTPrice = formatNearAmount(oneTokenCostBN.minus(storageCostBN).toFixed(0));
+  const manyNFTsPrice = formatNearAmount(
+    tenTokenCostBN.minus(storageCostBN.mul(Big(10))).toFixed(0)
+  );
+
   const price = {
-    oneNFT: oneTokenFormat - tokenStorageFormat,
-    manyNFTS: tenTokenFormat - 10 * tokenStorageFormat,
+    oneNFT: oneNFTPrice,
+    manyNFTS: manyNFTsPrice,
     tokenStorageFormat,
     discountFormat,
     tenTokenCost,

@@ -4,12 +4,10 @@ import GenerateBlock from './GenerateBlock';
 import { appStore } from '../../state/app';
 import useBuy from '../../hooks/useBuy';
 import img from '../../assets/img/11.png'
+import CalendarBtn from '../Hero/CalendarBtn';
 const Generate = () => {
   const { state } = useContext(appStore);
-  const { soldOut } = state.app;
-  const { oneNFT } = state.price;
-
-  const { formatPrice } = useBuy();
+  const { soldOut, wallet } = state.app;
 
   return (
     <section className="generate" id="generate">
@@ -37,10 +35,10 @@ const Generate = () => {
           <p className="generate__footer">
             For the flat fee of 5Ⓝ, you can mint your own Nearkat.
           </p>
+          <CalendarBtn noStyle className="generate__buy-btn" />
         </div>
 
         <div className="generate__block">
-
 
           <picture>
             <img

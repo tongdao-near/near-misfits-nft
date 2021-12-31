@@ -4,7 +4,7 @@ import Navigation from '../../components/Navigation';
 import SocialLinks from '../../components/SocialLinks';
 import ConnectWalletBtn from '../../components/ConnectWalletBtn';
 import Loader from '../../components/Loader/Loader';
-import logo from '../../assets/img/foot_logo.png';
+import logo from '../../assets/img/head-logo.png';
 const Header = () => {
   const { state } = useContext(appStore);
   const { wallet, account } = state;
