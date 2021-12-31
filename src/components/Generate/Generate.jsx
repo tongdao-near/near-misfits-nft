@@ -3,7 +3,7 @@ import GenerateSoldOut from './GenerateSoldOut';
 import GenerateBlock from './GenerateBlock';
 import { appStore } from '../../state/app';
 import useBuy from '../../hooks/useBuy';
-import img from '../../assets/img/11.png'
+import img from '../../assets/img/mystery.png';
 import CalendarBtn from '../Hero/CalendarBtn';
 const Generate = () => {
   const { state } = useContext(appStore);

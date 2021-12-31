@@ -6,7 +6,7 @@ const ConnectWalletBtn = ({ handleClick, text, claz }) => (
     {text ? (
       <p className="connect-wallet__text connect-wallet__text-name">{text}</p>
     ) : (
-      <p className="connect-wallet__text">Connect Wallet</p>
+      <p className="connect-wallet__text">连接钱包</p>
     )}
   </button>
 );

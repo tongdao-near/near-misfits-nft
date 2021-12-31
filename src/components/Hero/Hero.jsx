@@ -17,14 +17,14 @@ const Hero = () => {
             className="hero__headline__image"
             src={headline}
           />
-          <p className="hero__text">
-            同道星座学院是一个基于NEAR区块链随机生成的 NFT头像收藏合集，包含 12,000 枚由算法生成的独特同道星座头象，以盲盒形式发售。
-            
-          </p>
           <p className="hero__text">欢迎加入同道星座学院 - 创造快乐，追逐梦想！</p>
+          <br/>
+          <p className="hero__text">招生人数：12,000</p>
+          <p className="hero__text">开学时间：2022.01.01</p>
+          <p className="hero__text">入学学费：2 NEAR</p>
           { wallet?.signedIn ?
               (<CalendarBtn className="hero__calendar-btn" />) :
-              (<ConnectWalletBtn claz="" handleClick={() => wallet.signIn()} />)
+              (<ConnectWalletBtn claz="hero__calendar-btn" handleClick={() => wallet.signIn()} />)
           }
 
           <picture>

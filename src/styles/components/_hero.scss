@@ -46,7 +46,7 @@
   }
 
   &__text {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 150%;
     max-width: 475px;
     margin-bottom: 14px;
@@ -68,7 +68,7 @@
     position: absolute;
     z-index: 5;
     right: -70px;
-    bottom: -150px;
+    bottom: 0px;
     width: 573px;
 
 
@@ -90,34 +90,6 @@
 
   &__headline__image {
     margin-bottom: 30px;
-  }
-
-  &__img {
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    z-index: 5;
-    right: 0;
-    bottom: -80px;
-
-    @include for-laptop {
-      svg {
-        width: 300px;
-        height: auto;
-      }
-    }
-
-    @include for-tablet {
-      svg {
-        width: 200px;
-      }
-    }
-
-    @include for-phone {
-      svg {
-        width: 150px;
-      }
-    }
   }
 
   &__background {
