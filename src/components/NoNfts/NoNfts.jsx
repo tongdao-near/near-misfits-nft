@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Buy from '../Buy/Buy';
 import GenerateSoldOut from '../Generate/GenerateSoldOut';
 import ShareSocialLinks from '../ShareSocialLinks';
+import getConfig from '../../config';
 
 const NoNfts = ({ soldOut }) => {
   const { pathname } = useLocation();
@@ -20,7 +21,10 @@ const NoNfts = ({ soldOut }) => {
               </span>{' '}
             </p>
             <p className="no-nfts__text">
-              点击下方，立即购买<span className="no-nfts__text-purpure">专属NFT</span>
+              {Date.now() >= getConfig().preSaleTimestamp ?
+                  (<span>点击下方，立即购买<span className="no-nfts__text-purpure">专属NFT</span></span>) :
+                  (<span>预售现已开启， 符合条件用户可抢先购买</span>)
+              }
             </p>
             <ShareSocialLinks className="no-nfts__links" color="purpure" />
           </div>

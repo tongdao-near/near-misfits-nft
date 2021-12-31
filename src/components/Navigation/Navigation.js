@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/img/foot_logo.png';
+import getConfig from '../../config';
+
 const Navigation = ({ className, signedIn }) => (
-
   <nav className={`navigation ${className || ''}`}>
-
 
     <ul className="navigation__list">
 
@@ -30,7 +29,7 @@ const Navigation = ({ className, signedIn }) => (
         </Link>
       </li>
 
-      {signedIn && (
+      {signedIn && Date.now() >= getConfig().saleTimestamp && (
         <>
           <li className="navigation__list-item">
             <Link to="/my-nfts" className="navigation__link">
