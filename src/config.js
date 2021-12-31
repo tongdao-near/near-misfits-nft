@@ -10,7 +10,7 @@ export default function getConfig() {
     contractName,
     GAS: '200000000000000',
     DEFAULT_NEW_ACCOUNT_AMOUNT: '5',
-    saleTimestamp: 1740953999000, // 发售时间（包含预售），允许进入购买页面
+    saleTimestamp: 1640953999000, // 发售时间（包含预售），允许进入购买页面
     preSaleTimestamp: 1640953999000, // 预售截止时间，若发售时间 < 当前时间 < 预售截止时间, 则展示一行预售文字
     contractMethods: {
       changeMethods: [
