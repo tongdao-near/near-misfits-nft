@@ -14,14 +14,14 @@ const GenerateSoldOut = ({ className }) => {
 
   return (
     <div className={`generate-sold-out ${className || ''}`}>
-      <p className="generate-sold-out__text">Sold Out</p>
+      <p className="generate-sold-out__text">已售罄</p>
       <a
         className="generate-sold-out__link"
-        href="https://paras.id/search?q=misfits.tenk.near&sort=priceasc&pmin=.01&is_verified=true"
+        href="https://paras.id/collection/tongdao-xmas-drop-by-tongdaodashunear"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p>Buy on Paras</p>
+        <p>从Paras购买</p>
         <picture>
           <source srcSet="./images/generate-paras-2x.webp 2x, ./images/generate-paras.webp 1x" />
           <img
@@ -31,7 +31,7 @@ const GenerateSoldOut = ({ className }) => {
           ></img>
         </picture>
       </a>
-      {showSendNft && (
+      {false && (
         <BuyMoreBtn
           text="发送NFT"
           className="buy__nft"
