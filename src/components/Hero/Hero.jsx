@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import CalendarBtn from './CalendarBtn';
-import img1 from '../../assets/img/f1.png';
-import headline from '../../assets/img/headline.png';
+import img1 from '../../assets/img/hero.png';
+import headline from '../../assets/img/headline.svg';
 import ConnectWalletBtn from '../ConnectWalletBtn';
 import { appStore } from '../../state/app';
 
