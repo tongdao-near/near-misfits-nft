@@ -38,6 +38,17 @@
   &__item-ol {
   }
 
+  &__img {
+    width: 330px;
+    position: absolute;
+    left: 600px;
+    bottom: 0px;
+
+    @include for-phone {
+      display: none;
+    }
+  }
+
   &__item-ol > li {
     padding-bottom: 10px;
   }
@@ -56,7 +67,7 @@
     }
 
     &-text {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

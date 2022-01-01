@@ -1,4 +1,5 @@
 import React from 'react';
+import faqImage from '../../assets/img/faq-img.png';
 
 const FAQ = () => (
   <div id="faq" className="faq__wrapper">
@@ -81,8 +82,13 @@ const FAQ = () => (
               有的，版税定为 10%。我们将把其中的 2% 贡献回同道星座学院社区，用于未来的学院扩展与建设（接受社区监督与审查）。余下的将用于发展与推广星座文化，开发星座文创产品。
             </p>
           </li>
-
         </ul>
+
+        <img
+          className="faq__img"
+          src={faqImage}
+          alt='faq'
+        />
       </div>
     </section>
   </div>

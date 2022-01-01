@@ -4,7 +4,7 @@ import { appStore } from '../../state/app';
 import Navigation from '../../components/Navigation';
 import SocialLinks from '../../components/SocialLinks';
 import logo from '../../assets/img/foot-logo.svg';
-import img from '../../assets/img/f3.png';
+import img from '../../assets/img/foot-img.png';
 
 const Footer = () => {
   const { state } = useContext(appStore);

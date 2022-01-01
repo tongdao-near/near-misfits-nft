@@ -1,5 +1,6 @@
 .rate-list {
   display: flex;
+  margin-left: 20px;
 
   @include for-laptop {
     flex-wrap: wrap;
