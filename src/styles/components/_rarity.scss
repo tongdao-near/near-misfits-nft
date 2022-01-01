@@ -1,7 +1,7 @@
 .rarity {
   display: flex;
   flex-direction: column;
-  padding: 110px 0 285px;
+  padding: 110px 0 110px;
   overflow: hidden;
   background-color: #81CBCD;
   
@@ -47,7 +47,7 @@
 
   &__text {
     width: 312px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     color: #fff;
     margin-bottom: 16px;
