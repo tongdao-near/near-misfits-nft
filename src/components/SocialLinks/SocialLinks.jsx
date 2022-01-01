@@ -21,7 +21,7 @@ const SocialLinks = ({ className }) => (
       </picture>
     </a>
     <a
-      href="https://discord.gg/x9d4uTygkB"
+      href="https://t.me/TD12_Zodiac_Club"
       target="_blank"
       rel="noopener noreferrer"
     >

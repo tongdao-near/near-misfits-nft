@@ -19,6 +19,12 @@ const Navigation = ({ className, signedIn }) => (
         </Link>
       </li>
       <li className="navigation__list-item">
+        <Link to="/#generate" className="navigation__link">
+          权益
+        </Link>
+      </li>
+
+      <li className="navigation__list-item">
         <Link to="/#faq" className="navigation__link">
           FAQ
         </Link>
