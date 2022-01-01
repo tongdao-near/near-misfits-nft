@@ -3,6 +3,34 @@ import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import rarity from '../../assets/images/rarity-common.svg';
 
+import Aquarius from '../../assets/img/icons/Aquarius.svg';
+import Pisces from '../../assets/img/icons/Pisces.svg';
+import Aries from '../../assets/img/icons/Aries.svg';
+import Taurus from '../../assets/img/icons/Taurus.svg';
+import Gemini from '../../assets/img/icons/Gemini.svg';
+import Cancer from '../../assets/img/icons/Cancer.svg';
+import Leo from '../../assets/img/icons/Leo.svg';
+import Virgo from '../../assets/img/icons/Virgo.svg';
+import Libra from '../../assets/img/icons/Libra.svg';
+import Scorpio from '../../assets/img/icons/Scorpio.svg';
+import Sagittarius from '../../assets/img/icons/Sagittarius.svg';
+import Capricorn from '../../assets/img/icons/Capricorn.svg';
+
+const Sign = {
+  Aquarius,
+  Pisces,
+  Aries,
+  Taurus,
+  Gemini,
+  Cancer,
+  Leo,
+  Virgo,
+  Libra,
+  Scorpio,
+  Sagittarius,
+  Capricorn
+};
+
 const NftItemInfo = ({ className, item, urlIpfs, info }) => {
   const nftInfo = useRef();
 
@@ -28,14 +56,19 @@ const NftItemInfo = ({ className, item, urlIpfs, info }) => {
         <p className="nft-item-info__number">
           # {item?.title?.padStart(5, '0')}
         </p>
-        <ReactSVG
+        <img
           className="nft-item-info__rarity"
-          src={item.rarity || rarity}
+          src={Sign[info?.Sign]}
         />
       </div>
       <div className="nft-item-info__stats">
-        <p>kind : {info?.kind || 'no data'}</p>
-        <p>seed : {info?.seed || 'no data'}</p>
+        {
+          Object.keys(info).map(k => {
+            return (
+              <p key={k}>{k} : {info[k]}</p>
+            )
+          })
+        }
       </div>
     </div>
   );

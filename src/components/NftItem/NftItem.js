@@ -4,20 +4,35 @@ import React, { useState, useEffect } from 'react';
 import { ReactSVG } from 'react-svg';
 import PropTypes from 'prop-types';
 import NftItemInfo from '../NftItemInfo';
-import Normies from '../../assets/images/rarity-common.svg';
-import Skellies from '../../assets/images/rarity-rare.svg';
-import Zombies from '../../assets/images/rarity-uncommon.svg';
-import Meerkats from '../../assets/images/rarity-very-rare.svg';
-import Glitches from '../../assets/images/rarity-super-rare.svg';
 import Spinner from '../../assets/img/spinner.gif';
 import Reveal from '../../pages/MyNFTS/Reveal';
 
-const rarity = {
-  Normies,
-  Skellies,
-  Zombies,
-  Meerkats,
-  Glitches,
+import Aquarius from '../../assets/img/icons/Aquarius.svg';
+import Pisces from '../../assets/img/icons/Pisces.svg';
+import Aries from '../../assets/img/icons/Aries.svg';
+import Taurus from '../../assets/img/icons/Taurus.svg';
+import Gemini from '../../assets/img/icons/Gemini.svg';
+import Cancer from '../../assets/img/icons/Cancer.svg';
+import Leo from '../../assets/img/icons/Leo.svg';
+import Virgo from '../../assets/img/icons/Virgo.svg';
+import Libra from '../../assets/img/icons/Libra.svg';
+import Scorpio from '../../assets/img/icons/Scorpio.svg';
+import Sagittarius from '../../assets/img/icons/Sagittarius.svg';
+import Capricorn from '../../assets/img/icons/Capricorn.svg';
+
+const Sign = {
+  Aquarius,
+  Pisces,
+  Aries,
+  Taurus,
+  Gemini,
+  Cancer,
+  Leo,
+  Virgo,
+  Libra,
+  Scorpio,
+  Sagittarius,
+  Capricorn
 };
 
 const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
@@ -42,6 +57,7 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
     onClick({ [item.title]: true });
   };
 
+  console.log(info);
   const src = new URL(item.media, urlIpfs).href;
 
   return (
@@ -64,7 +80,7 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
 
           <div className="nft-item__footer">
             <p className="nft-item__hash"># {item?.title?.padStart(5, '0')}</p>
-            <ReactSVG src={rarity[info?.kind] || Normies} />
+            <img className="nft-item__sign" src={Sign[info?.Sign]} />
           </div>
 
           <NftItemInfo

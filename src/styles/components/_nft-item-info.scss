@@ -7,6 +7,7 @@
   pointer-events: none;
   font-size: 10px;
   line-height: 200%;
+  width: 400px;
 
   &__icon-wrapper {
     position: relative;
@@ -31,8 +32,8 @@
     right: -10px;
     top: 90px;
     background-color: $white;
-    width: 48px;
-    height: 48px;
+    width: 28px;
+    height: 28px;
     border-radius: 100px;
     line-height: 0;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
