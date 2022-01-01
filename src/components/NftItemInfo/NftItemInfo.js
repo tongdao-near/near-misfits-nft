@@ -33,7 +33,7 @@ const Sign = {
 
 function getSign(info) {
   if (!info?.attributes) {
-    return 'Taurus';
+    return;
   }
 
   for (const pair of info.attributes) {
@@ -68,10 +68,12 @@ const NftItemInfo = ({ className, item, urlIpfs, info }) => {
         <p className="nft-item-info__number">
           # {item?.title?.padStart(5, '0')}
         </p>
-        <img
-          className="nft-item-info__rarity"
-          src={Sign[getSign(info)]}
-        />
+        {getSign(info) &&
+          <img
+            className="nft-item-info__rarity"
+            src={Sign[getSign(info)]}
+          />
+        }
       </div>
       <div className="nft-item-info__stats">
         {info?.attributes && 

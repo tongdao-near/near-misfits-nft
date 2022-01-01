@@ -37,7 +37,7 @@ const Sign = {
 
 function getSign(info) {
   if (!info?.attributes) {
-    return 'Taurus';
+    return
   }
 
   for (const pair of info.attributes) {
@@ -91,7 +91,9 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
 
           <div className="nft-item__footer">
             <p className="nft-item__hash"># {item?.title?.padStart(5, '0')}</p>
-            <img className="nft-item__sign" src={Sign[getSign(info)]} />
+            {getSign(info) &&
+              <img className="nft-item__sign" src={Sign[getSign(info)]} />
+            }
           </div>
 
           <NftItemInfo
