@@ -1,5 +1,5 @@
 const contractName =
-  process.env.REACT_APP_CONTRACT_NAME || 'tongv0.tenk.mainnet';
+  process.env.REACT_APP_CONTRACT_NAME || 'zodiac.tenk.near';
 
 export default function getConfig() {
   let config = {
