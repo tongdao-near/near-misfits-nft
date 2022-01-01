@@ -121,7 +121,7 @@ export const initNear =
         const app = {
           ...state.app,
           misfitsArray,
-          urlIpfs,
+          urlIpfs: 'https://cloudflare-ipfs.com/ipfs/bafybeihkaal3xdox6sj3gpnptxxu27z5w3hp6jcn7fpctfoa4rkvvibcra/',
           linkDropArray,
           soldOut,
           tokensLeft,

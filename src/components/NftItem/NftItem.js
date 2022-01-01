@@ -35,6 +35,18 @@ const Sign = {
   Capricorn
 };
 
+function getSign(info) {
+  if (!info?.attributes) {
+    return 'Taurus';
+  }
+
+  for (const pair of info.attributes) {
+    if (pair.trait_type === 'Sign') {
+      return pair.value;
+    }
+  }
+}
+
 const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
   const [reveal, setReveal] = useState(isReveal);
   const [info, setInfo] = useState({});
@@ -57,7 +69,6 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
     onClick({ [item.title]: true });
   };
 
-  console.log(info);
   const src = new URL(item.media, urlIpfs).href;
 
   return (
@@ -80,7 +91,7 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
 
           <div className="nft-item__footer">
             <p className="nft-item__hash"># {item?.title?.padStart(5, '0')}</p>
-            <img className="nft-item__sign" src={Sign[info?.Sign]} />
+            <img className="nft-item__sign" src={Sign[getSign(info)]} />
           </div>
 
           <NftItemInfo

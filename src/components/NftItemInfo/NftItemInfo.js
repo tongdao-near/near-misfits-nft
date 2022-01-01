@@ -31,6 +31,18 @@ const Sign = {
   Capricorn
 };
 
+function getSign(info) {
+  if (!info?.attributes) {
+    return 'Taurus';
+  }
+
+  for (const pair of info.attributes) {
+    if (pair.trait_type === 'Sign') {
+      return pair.value;
+    }
+  }
+}
+
 const NftItemInfo = ({ className, item, urlIpfs, info }) => {
   const nftInfo = useRef();
 
@@ -58,14 +70,14 @@ const NftItemInfo = ({ className, item, urlIpfs, info }) => {
         </p>
         <img
           className="nft-item-info__rarity"
-          src={Sign[info?.Sign]}
+          src={Sign[getSign(info)]}
         />
       </div>
       <div className="nft-item-info__stats">
-        {
-          Object.keys(info).map(k => {
+        {info?.attributes && 
+          info.attributes.map(pair => {
             return (
-              <p key={k}>{k} : {info[k]}</p>
+              <p key={pair.trait_type}>{pair.trait_type} : {pair.value}</p>
             )
           })
         }
