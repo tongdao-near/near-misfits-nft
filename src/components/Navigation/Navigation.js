@@ -10,7 +10,7 @@ const Navigation = ({ className, signedIn }) => (
 
       <li className="navigation__list-item">
         <Link to="/#learn" className="navigation__link">
-          学习
+          详情
         </Link>
       </li>
       <li className="navigation__list-item">
