@@ -13,7 +13,7 @@ import Leo from '../../assets/img/icons/Leo.svg';
 import Virgo from '../../assets/img/icons/Virgo.svg';
 import Libra from '../../assets/img/icons/Libra.svg';
 import Scorpio from '../../assets/img/icons/Scorpio.svg';
-import Sagittarius from '../../assets/img/icons/Sagittarius.svg';
+import Stagittarius from '../../assets/img/icons/Sagittarius.svg';
 import Capricorn from '../../assets/img/icons/Capricorn.svg';
 
 const Sign = {
@@ -27,7 +27,7 @@ const Sign = {
   Virgo,
   Libra,
   Scorpio,
-  Sagittarius,
+  Stagittarius,
   Capricorn
 };
 
