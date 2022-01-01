@@ -76,9 +76,7 @@ const LinkDrop = () => {
 
         <div className="link-drop__data">
           <header className="link-drop__header">
-            <span className="link-drop__header-purpure">Share</span> a mystery{' '}
-            <span className="link-drop__header-purpure">NFT</span> with your
-            friend
+            快送给朋友一个<span className="link-drop__header-purpure">NFT盲盒</span>吧！
           </header>
 
           <div className="link-drop__center">
