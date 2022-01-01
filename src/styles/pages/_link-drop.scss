@@ -61,7 +61,7 @@
     position: relative;
 
     &::before {
-      content: 'Shareable links';
+      content: '分享链接';
       position: absolute;
       top: -20px;
       left: 35px;
@@ -70,7 +70,7 @@
     }
 
     &::after {
-      content: 'Who did I share this link with?';
+      content: '需要分享给谁?';
       position: absolute;
       top: -20px;
       left: 355px;

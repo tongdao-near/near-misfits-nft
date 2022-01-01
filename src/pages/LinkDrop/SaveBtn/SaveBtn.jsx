@@ -31,7 +31,7 @@ const SaveBtn = ({ linkDropArray }) => {
       onClick={handleClick}
       target="_blank"
     >
-      Save
+      保存链接
       <p className={`save-btn__saved ${animation}`}>saved</p>
     </a>
   );
