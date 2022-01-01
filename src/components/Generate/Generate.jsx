@@ -14,11 +14,12 @@ const Generate = () => {
       <div className="generate__container">
         <div className="generate__information">
           <h2 className="generate__title">
-            为什么要购买NFT
+            NFT为什么值得收藏
           </h2>
 
           <p className="generate__text">
-            本次推出的NFT，是以深受 6000 多万粉丝的喜爱的 12 星座-同道天团（TD12）卡通形象为原型，算法随机生成的头像类NFT收藏合集，包含12,000枚由算法生成的独一无二的星座头像，每一个都是幽默萌系的代表。此外，项目方根据星座穿戴元素的稀缺性，设置了不同级别的稀缺度，增加了好玩度和娱乐性。
+            2021年是NFT元年，特别是头像类NFT因具备强社交属性火爆全网。通常，头像类NFT由一个主体与多层元素属性随机生成。
+            而同道星座学院打破常规，是由12个主体组合而成的NFT头像收藏合集。依托于同道大叔丰富的星座文化内涵，为此次盲盒的开启增加了更多的惊喜与乐趣！
           </p>
 
           <p className="generate__text-big">
