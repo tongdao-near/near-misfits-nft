@@ -45,6 +45,10 @@
     @include for-laptop {
       margin-right: 0;
     }
+
+    @include for-phone {
+      display: none !important;
+    }
   }
 
   &__wallet {
