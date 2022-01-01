@@ -3,9 +3,8 @@ import { ReactSVG } from 'react-svg';
 import { appStore } from '../../state/app';
 import Navigation from '../../components/Navigation';
 import SocialLinks from '../../components/SocialLinks';
-import logo from '../../assets/img/foot_logo.png';
+import logo from '../../assets/img/foot-logo.svg';
 import img from '../../assets/img/f3.png';
-import nearLogo from '../../assets/img/foot-near.svg';
 
 const Footer = () => {
   const { state } = useContext(appStore);
@@ -19,7 +18,6 @@ const Footer = () => {
         <Navigation className="footer__navigation" signedIn={wallet.signedIn} />
 
         <img className="footer__logo" src={logo} />
-        <img className="footer__logo" src={nearLogo} alt="near" />
 
         <SocialLinks className="footer__social" />
 
