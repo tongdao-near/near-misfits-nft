@@ -2,7 +2,7 @@
   padding-top: 150px;
   position: relative;
   font-family: 'Manrope', sans-serif;
-  background-color: #F7C6D0;
+  background-color: #79CBE5;
   &__wrapper {
     
     @include for-tablet {
@@ -35,6 +35,13 @@
     line-height: 150%;
   }
 
+  &__item-ol {
+  }
+
+  &__item-ol > li {
+    padding-bottom: 10px;
+  }
+
   &__item {
     margin-bottom: 60px;
 
@@ -46,6 +53,10 @@
 
     &-team {
       margin-bottom: 16px;
+    }
+
+    &-text {
+      font-size: 14px;
     }
   }
 }

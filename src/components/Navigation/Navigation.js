@@ -23,11 +23,6 @@ const Navigation = ({ className, signedIn }) => (
           FAQ
         </Link>
       </li>
-      <li className="navigation__list-item">
-        <Link to="/#generate" className="navigation__link">
-          路线图
-        </Link>
-      </li>
 
       {signedIn && Date.now() >= getConfig().saleTimestamp && (
         <>

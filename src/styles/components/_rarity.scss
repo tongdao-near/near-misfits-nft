@@ -13,10 +13,28 @@
   &__title {
     position: relative;
     z-index: 10;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 115%;
     width: 330px;
-    color: #F2AB26;
+    color: #fff;
+    margin-bottom: 20px;
+
+    @include for-phone {
+      text-align: center;
+    }
+
+    @include for-small-phone {
+      width: unset;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 10;
+    font-size: 24px;
+    line-height: 115%;
+    width: 330px;
+    color: #fff;
 
     @include for-phone {
       text-align: center;
