@@ -8,7 +8,7 @@ import socialTwitter from '../../assets/images/social-twitter.png';
 const SocialLinks = ({ className }) => (
   <div className={`social-links ${className || ''}`}>
     <a
-      href="https://paras.id/search?q=misfits.tenk.near&sort=priceasc&pmin=.01&is_verified=true"
+      href="https://paras.id/collection/tongdao-xmas-drop-by-tongdaodashunear"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -21,14 +21,14 @@ const SocialLinks = ({ className }) => (
       </picture>
     </a>
     <a
-      href="https://discord.com/invite/UY9Xf2k"
+      href="https://discord.gg/x9d4uTygkB"
       target="_blank"
       rel="noopener noreferrer"
     >
       <img className="social-links__item" src={socialFace} alt="discord" />
     </a>
     <a
-      href="https://twitter.com/NEARProtocol"
+      href="https://twitter.com/tongdao_nft"
       rel="noopener noreferrer"
       target="_blank"
     >
